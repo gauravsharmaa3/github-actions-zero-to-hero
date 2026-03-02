@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # This is workflow name
 name: Hello 
 
@@ -22,12 +23,35 @@ jobs:
     steps:
       - name: say hello to users
         run: echo "Hello Dosto"
+=======
+name: Hello
+
+on:
+  push:
+    branches: [main]
+
+
+
+jobs:
+
+
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: say hello to user
+        run: echo "Hello My World"
+>>>>>>> fde780a (Added github and workflow folder also added first yml file hello.yml)
 
       - name: say hello to username
         run: echo "Hello $USER"
 
+<<<<<<< HEAD
   details:
     runs-on: ubuntu-latest
     steps:
       - name: version of python, docker, etc
         run: docker --version && python --version
+=======
+
+  
+>>>>>>> fde780a (Added github and workflow folder also added first yml file hello.yml)
