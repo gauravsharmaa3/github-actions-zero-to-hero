@@ -38,6 +38,7 @@ jobs:
         run: echo "Testing the code"
 
   deploy:
+    if: inputs.environment == 'dev'
     needs: [test, build]                                            # Work as like depends-on so here deploy needs test and build to run first
     runs-on: ubuntu-latest
     steps:
