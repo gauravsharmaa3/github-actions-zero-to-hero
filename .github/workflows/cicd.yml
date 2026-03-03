@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:                                                        # We can define the input to run the pipeline for env
       environment:                                                # Define environment type and its option inside this block
-        discription: This is the environment value we can choose for pipline
+        description: This is the environment value we can choose for pipline
         default: 'dev'                                            # we have taken default env is as a dev
         required: true                                            # True 
         type: choice                                              # Here we have taken type as a choice, we can also use boolen, env and so on.
