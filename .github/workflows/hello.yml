@@ -44,6 +44,7 @@ jobs:
 
       - name: say hello to username
         run: echo "Hello $USER"
+ 
 
 <<<<<<< HEAD
   details:
@@ -53,5 +54,14 @@ jobs:
         run: docker --version && python --version
 =======
 
+<<<<<<< HEAD
   
 >>>>>>> fde780a (Added github and workflow folder also added first yml file hello.yml)
+=======
+  details:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show the version for Python and Docker
+        run: docker --version && python --version && cat /etc/os-release
+
+>>>>>>> 3c566dd (Added new job like docker version and python version with os release)
