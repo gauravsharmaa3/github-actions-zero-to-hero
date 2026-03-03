@@ -1,28 +1,28 @@
-name: Hello
+name: Hello                                                               # This is workflow name
 
 on:
-  push:
-    branches: [main]
+  push:                                                                   # Condition on push 
+    branches: [main]                                                      # Branch name herer it is main
 
 
 
-jobs:
+jobs:                                                                     # All jobs will be added after that 
 
 
-  greet:
-    runs-on: ubuntu-latest
-    steps:
-      - name: say hello to user
-        run: echo "Hello My World"
+  greet:                                                                  # Job1 whose name is greet
+    runs-on: ubuntu-latest                                                # Os on Which job will run
+    steps:                                                                # Steps are followed in this job
+      - name: say hello to user                                           # step 1 name need to write here
+        run: echo "Hello My World"                                        # Command to perform the step
 
-      - name: say hello to username
-        run: echo "Hello $USER"
+      - name: say hello to username                                       # step 2 name need to write here
+        run: echo "Hello $USER"                                           # Command to perform the step
  
 
 
-  details:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Show the version for Python and Docker
-        run: docker --version && python --version && cat /etc/os-release
+  details:                                                                # Job2 whose name is details
+    runs-on: ubuntu-latest                                                # Os on Which job will run
+    steps:                                                                # Steps are followed in this job
+      - name: Show the version for Python and Docker                      # step 1 name need to write here
+        run: docker --version && python --version && cat /etc/os-release  # Command to perform the step
 
