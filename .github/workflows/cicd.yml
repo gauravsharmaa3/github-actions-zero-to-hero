@@ -2,7 +2,7 @@ name: CICD
 
 on:
   workflow_dispatch:
-    input:                                                        # We can define the input to run the pipeline for env
+    inputs:                                                        # We can define the input to run the pipeline for env
       environment:                                                # Define environment type and its option inside this block
         discription: This is the environment value we can choose for pipline
         default: 'dev'                                            # we have taken default env is as a dev
