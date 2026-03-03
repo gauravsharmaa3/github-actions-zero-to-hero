@@ -15,18 +15,21 @@ jobs:
 
 
   build:
+    needs: [code]                                                   # Work as like depends-on so here build needs test to run first
     runs-on: ubuntu-latest
     steps:
       - name: build docker container
         run: echo "Docker container build"
 
-  test: 
+  test:
+    needs: [build]                                                  # Work as like depends-on so here test needs build to run first
     runs-on: ubuntu-latest
     steps:
       - name: Test the code
         run: echo "Testing the code"
 
-  deploy: 
+  deploy:
+    needs: [test, build]                                            # Work as like depends-on so here deploy needs test and build to run first
     runs-on: ubuntu-latest
     steps:
       - name: Deploy the code
