@@ -1,8 +1,9 @@
 name: Hello                                                               # This is workflow name
 
 on:
-  push:                                                                   # Condition on push 
-    branches: [main]                                                      # Branch name herer it is main
+  workflow_dispatch:                                                       # Will only work manually
+  #push:                                                                   # Condition on push 
+    #branches: [main]                                                      # Branch name herer it is main
 
 
 
