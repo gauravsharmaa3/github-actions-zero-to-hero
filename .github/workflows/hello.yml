@@ -1,10 +1,11 @@
 name: Hello                                                               # This is workflow name
 
 on:
-  workflow_dispatch:                                                       # Will only work manually
-  #push:                                                                   # Condition on push 
-    #branches: [main]                                                      # Branch name herer it is main
-
+  #workflow_dispatch:                                                       # Will only work manually
+  push:                                                                   # Condition on push 
+    branches: [main]                                                      # Branch name herer it is main
+    paths:                                                                # Define the path of filter  
+      - '**.html'                                                         # only runs when there is any changes in any .html file    
 
 
 jobs:                                                                     # All jobs will be added after that 
