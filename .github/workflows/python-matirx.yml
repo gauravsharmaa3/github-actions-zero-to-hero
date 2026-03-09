@@ -31,4 +31,4 @@ jobs:
 
 
       - name: run linter
-        uses: flake8  
+        run: flake8 app.py 
