@@ -1,0 +1,29 @@
+name: Hello                                                               # This is workflow name
+
+on:
+  workflow_dispatch:                                                       # Will only work manually
+  #push:                                                                   # Condition on push 
+    #branches: [main]                                                      # Branch name herer it is main
+
+
+
+jobs:                                                                     # All jobs will be added after that 
+
+
+  greet:                                                                  # Job1 whose name is greet
+    runs-on: ubuntu-latest                                                # Os on Which job will run
+    steps:                                                                # Steps are followed in this job
+      - name: say hello to user                                           # step 1 name need to write here
+        run: echo "Hello My World"                                        # Command to perform the step
+
+      - name: say hello to username                                       # step 2 name need to write here
+        run: echo "Hello $USER"                                           # Command to perform the step
+ 
+
+
+  details:                                                                # Job2 whose name is details
+    runs-on: ubuntu-latest                                                # Os on Which job will run
+    steps:                                                                # Steps are followed in this job
+      - name: Show the version for Python and Docker                      # step 1 name need to write here
+        run: docker --version && python --version && cat /etc/os-release  # Command to perform the step
+
