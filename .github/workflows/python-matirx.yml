@@ -2,8 +2,9 @@ name: Python-lint
 
 
 on:
-  push:
-    branches: [mywork]
+  #  push:
+  #    branches: [mywork]
+  workflow_dispatch:    
 
 
 
