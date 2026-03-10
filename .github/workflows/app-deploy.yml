@@ -2,8 +2,9 @@ name: Flask App deployed
 
 
 on:
-  push:
-    branches: [mywork]
+#  push:
+#  branches: [mywork]
+  workflow_dispatch:
 
 
 jobs:
@@ -13,7 +14,10 @@ jobs:
 
     steps:
       - name: checkout Code
-        uses: actions/checkout@v4 
+        uses: actions/checkout@v4
 
+      - name: setup docker compose on runner 
+        run: docker/setup-compose-action@v2
+          
       - name: deploy with docker compose
         run: docker compose up -d --build
