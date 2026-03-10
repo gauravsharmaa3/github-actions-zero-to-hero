@@ -1,6 +1,5 @@
 name: Flask App deployed
 
-
 on:
   push:
     branches: [mywork]
