@@ -11,8 +11,8 @@ jobs:
       DOCKERHUB_USER: ${{ vars.DOCKERHUB_USER }}
 
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
+     - name: Checkout Code
+       uses: actions/checkout@v4
 
-      - name: Code deploy with docker compose
-        run: docker compose up -d --build
+     - name: Code deploy with docker compose
+       run: docker compose up -d --build
