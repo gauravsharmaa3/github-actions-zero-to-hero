@@ -2,7 +2,8 @@ name: Flask App deployed
 
 
 on:
-  workflow_dispatch:
+  push:
+    branches: [mywork]
 
 
 jobs:
