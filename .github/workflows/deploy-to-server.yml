@@ -45,7 +45,7 @@ jobs:
 
 
       - name: ssh to prod server and run the app
-        uses: appleboy/ssh-action@v1.03
+        uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.EC2_SSH_HOST }}
           username: ${{ secrets.EC2_SSH_USER }}
