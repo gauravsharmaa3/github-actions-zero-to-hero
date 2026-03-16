@@ -2,8 +2,9 @@ name: Docker Build & Push
 
 
 on:
-  push:
-    branches: [mywork]
+  workflow_dispatch:
+#  push:
+#    branches: [mywork]
 
 
 jobs:
